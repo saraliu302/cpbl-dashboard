@@ -3,7 +3,3 @@ pandas
 numpy
 scipy
 plotly
-datetime
-os
-base64
-re
