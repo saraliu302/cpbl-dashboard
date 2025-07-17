@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#0060B0"             # CPBL 藍
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#f4f5f6" # CPBL 綠
+textColor = "#000000"
+font = "sans serif"

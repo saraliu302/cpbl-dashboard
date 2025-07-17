@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+scipy
+plotly
+datetime
+ttest_rel
+os
+base64
+re
