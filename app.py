@@ -6,6 +6,9 @@ from scipy.stats import ttest_rel
 import plotly.express as px
 import os, base64, re
 
+# ---- set different background color for info function ----
+def info(url):
+     st.markdown(f'<p style="background-color:#0066cc;color:#33ff33;font-size:24px;border-radius:2%;">{url}</p>', unsafe_allow_html=True)
 # ---- Configuration ----
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 st.set_page_config(page_title="CPBL Home/Away Analytics", layout="wide")
@@ -190,8 +193,9 @@ st.title("CPBL Seasonal Home/Away Analysis")
 st.write("A data‑driven analysis of CPBL home‑field performance across seasons. We compare home vs. away win rates and scoring, apply paired t‑tests for statistical significance, and quantify effect size with Cohen’s d.")
 st.write(f"Year: {year} • α={alpha}")
 st.subheader("Insights")
-st.info(f"**{', '.join(sig_list) if sig_list else 'None'}** have significant differences in {metric_label}, which confirms a real home-field boost.")
+st.info(f":green[**{', '.join(sig_list) if sig_list else 'None'}** have significant differences in {metric_label}, which confirms a real home-field boost.]")
 st.info(f"**{', '.join(non_sig) if non_sig else 'None'}** have no meaningful difference in {metric_label}.")
+
 
 # ---- Metrics Table ----
 st.subheader("Metrics Table")
